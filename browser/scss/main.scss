@@ -1,5 +1,15 @@
+//Page-wide styles
+
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: HarrietText;
+  font-weight: bold;
+  src: url("/fonts/HarrietText-BoldItalic-1v6 2.otf") format("opentype");
 }
 
 @mixin clearfix {

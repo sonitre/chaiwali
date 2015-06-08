@@ -3,8 +3,10 @@
 <head>
     <base href="/" />
     <title>Fullstack Academy Generated Application</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="/lodash/lodash.js"></script>
     <script src="/jquery/dist/jquery.js"></script>
     <script src="/bootstrap/dist/js/bootstrap.js"></script>
@@ -14,6 +16,10 @@
     <script src="/main.js"></script>
 </head>
 <body ng-app="FullstackGeneratedApp">
-    <div ui-view></div>
+    <load-indicator></load-indicator>
+    <div ng-controller="windowCtrl">
+        <navbar ng-class="{'nav-top-level' : topLevel && validState }"></navbar>
+    </div>
+    <div><ui-view></ui-view></div>
 </body>
 </html>

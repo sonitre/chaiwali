@@ -1,16 +1,50 @@
+
 navbar {
-
+  letter-spacing: .2em;
+  font-size: 1.4em;
+  font-weight: 800;
   display: block;
-  background: #a1a1a1;
+  position: fixed;
+  top: 0;
+  background: transparent;
+  width: 100%;
+  z-index: 1000;
 
-  fullstack-logo {
-    padding-top: 10px;
-    margin-right: 20px;
-    width: 30px;
+  .navLinks {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .navLinks > ul > li > a {
+    font-weight: 400;
+  }
+
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  .navbar .navbar-nav {
+    float: right;
+  }
+
+  .search-button {
+    background-color: white;
+    margin-top: 0.8%;
+    transition: margin 0.2s;
+    transform: translate3d(0,0,0);
+  }
+
+  .logo {
+    margin-top: 20%;
+    margin-right: 8px;
+    transition: margin 0.2s;
+    transform: translate3d(0,0,0);
+    font-family: 'Megrim', cursive;
+    color: black;
   }
 
   a {
-    color: white;
+    color: orange;
     &:hover {
       color: white;
     }
@@ -19,31 +53,80 @@ navbar {
   .nav > li > a {
     cursor: pointer;
     &.active {
-      color: #f30046;
+      color: orange;
     }
     &:hover {
       transition: color 0.2s;
     }
     &:focus {
-      color: #f30046;
+      color: white;
       background: transparent;
     }
   }
 
-  .login-button {
-    float: right;
-    margin-top: 8px;
+  .navbar-nav > li > a {
+    transition: padding 0.2s;
   }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    background: transparent;
+  }
+
 
   .welcome {
     float: right;
-    margin-top: 12px;
+    margin-top: 0px;
+    margin-right: 0px;
+    transform: translate3d(0,0,0);
+
     span {
-      color: white;
+      color: grey !important;
+      position: relative;
+      top: 16px;
+      padding-right: 8px;
+      transition: top 0.2s;
+      transform: translate3d(0,0,0);
     }
     a {
-      color: #f30046;
+      color: #FFF;
       cursor: pointer;
+    }
+  }
+
+
+
+
+  &.nav-top-level {
+    border-bottom: none;
+    background: transparent;
+
+    .search-button {
+      background-color: transparent;
+      margin-top: 1.8%;
+    }
+    .logo {
+      margin-top: 39%;
+      color: #eee;
+      font-family: 'Megrim', cursive;
+    }
+
+    a {
+      margin-left: auto;
+      margin-right: auto;
+      color: orange;
+    }
+    .welcome {
+      span {
+        top: 32px;
+        color: #000;
+      }
+    }
+
+    .navbar-nav > li > a {
+      transition: top 0.2s;
+      transform: translate3d(0,0,0);
+      color: orange;
+      padding: 17px 15px;
     }
   }
 
